@@ -1,0 +1,18 @@
+Przyklad generowania sygnalu PWM dla linii PB4/SPI1_MISO/LCD_SEG8/EVENTOUT/TSC_G5_IO2/TIM22_CH1
+(linia steruje zielona dioda LED LD3) w module STM32L053 Discovery.
+
+Zielona dioda LED (LD3) modulu STM32L053DISCO periodycznie rozpoczyna swiecenie z pelna 
+jasnoscia (czas trwania stanu LOW rowny TimePWMLowMIN_us), a konczy z minimalna
+jasnoscia swiecenia (czas trwania stanu LOW rowny TimePWMLowMAX_us).
+
+Za modulacje jasnosci swiecenia czerwonej diody LED odpowiada licznik TIM22:
+ - taktowanie rdzenia mikrokontrolera sygnalem o czestotliwosci 2,097 MHz,
+ - licznik TIM22 taktowany sygnalem o czestotliwosci 1,0485 MHz (podzial sygnalu 
+   taktujacego rdzen mikrokontrolera HCLK = 2,097 MHz w dzielniku wstepnym przez 4, 
+   powielenie przez 2 i podzial w dzielniku wstepnym licznika TIM22 przez 1),
+ - komparator TIM22_ARR wyznacza okres generowanego sygnalu PWM
+   (deklaracja TimePWMPeriod_us w pliku 'user_STM32L053Disco.h'),
+ - komparator TIM22_CCR1 wyznacza czas trwania sygnalu Low generowanego sygnalu PWM
+   (deklaracja TimePWMLow_us w pliku 'user_STM32L053Disco.h').
+ 
+ 

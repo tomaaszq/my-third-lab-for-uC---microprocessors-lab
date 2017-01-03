@@ -1,0 +1,70 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Tomasz Tomasz, Tomasz, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.14.0.0
+Toolchain Path:  C:\Program Files\Keil514\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DARMCM1.DLL V1.12.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.14.0_KEIL
+Dialog DLL:      TARMCM1.DLL V1.9.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Tomasz Rudowicz\Documents\PTMlab3\Zadanie\TIM22_CH1_PWM.uvprojx
+Project File Date:  10/28/2016
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling system_stm32l0xx.c...
+Device\system_stm32l0xx.c(66): error:  #5: cannot open source input file "stm32l0xx.h": No such file or directory
+  #include "stm32l0xx.h"
+Device\system_stm32l0xx.c: 0 warnings, 1 error
+compiling TIM22_CH1_PWM_main.c...
+Source\TIM22_CH1_PWM_main.c(10): error:  #5: cannot open source input file "stm32l0xx.h": No such file or directory
+  #include "stm32l0xx.h"                                                        // typ procesora
+Source\TIM22_CH1_PWM_main.c: 0 warnings, 1 error
+compiling System_Clock_MSI.c...
+Library\System_Clock_MSI.c(15): error:  #5: cannot open source input file "stm32l0xx.h": No such file or directory
+  #include "stm32l0xx.h"                                                        // plik naglowkowy typu procesora
+Library\System_Clock_MSI.c: 0 warnings, 1 error
+compiling TIM22_CH1_PWM_Lib.c...
+Library\TIM22_CH1_PWM_Lib.c(16): error:  #5: cannot open source input file "stm32l0xx.h": No such file or directory
+  #include <stm32l0xx.h>             // typ procesora
+Library\TIM22_CH1_PWM_Lib.c: 0 warnings, 1 error
+compiling TIM22_IRQHandler.c.c...
+Library\TIM22_IRQHandler.c.c(10): error:  #5: cannot open source input file "stm32l0xx.h": No such file or directory
+  #include <stm32l0xx.h>                // typ procesora
+Library\TIM22_IRQHandler.c.c: 0 warnings, 1 error
+".\Objects\TIM22_CH1_PWM.axf" - 5 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.2.0.pack
+                ARM::CMSIS:CORE:3.40.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 3.40.0
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\Tomasz Rudowicz\Documents\PTMlab3\Zadanie\RTE
+  C:\Program Files\Keil514\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:3.40.0
+      Source file:   CMSIS\UserCodeTemplates\ARM\ITM_Retarget.c
+Target not created.
+</pre>
+</body>
+</html>
